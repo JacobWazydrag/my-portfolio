@@ -31,7 +31,6 @@ export default function TopBar() {
     };
   }, []);
   const theme = useTheme();
-  console.log(theme);
   const useStyles = makeStyles({
     header: {
       backgroundColor: lighten(0.1, theme.header.background),
@@ -70,7 +69,6 @@ export default function TopBar() {
   });
 
   const classes = useStyles();
-  console.log(path);
   const displayDesktop = () => {
     return (
       <Toolbar className={classes.header}>
