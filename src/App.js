@@ -1,24 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import { ThemeProvider } from '@material-ui/core/styles';
+import createPorfolioTheme from './theme';
+import TopBar from './components/topBar/topBar';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from './pages/home/home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={createPorfolioTheme('DARK')}>
+      <BrowserRouter>
+        <TopBar />
+        <Switch>
+          <Route exact path='/'>
+            <Home />
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
