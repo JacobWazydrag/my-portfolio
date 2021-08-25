@@ -1,0 +1,4 @@
+body {
+    width: '-webkit-available';
+    overflow-x: hidden;
+}

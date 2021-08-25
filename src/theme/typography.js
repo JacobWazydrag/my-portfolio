@@ -47,6 +47,22 @@ const typography = {
     fontWeight: 500,
     lineHeight: 1.25,
   },
+  homeTitlesLeft: {
+    fontSize: "2.2rem",
+    fontWeight: 600,
+    lineHeight: 1.25,
+    float: 'left',
+    fontFamily: '"proxima nova bold", "Helvetica Neue", Helvetica, Arial, Sans-serif;',
+    transform: 'translateY(350%)',
+  },
+  homeTitlesRight: {
+    fontSize: "2.2rem",
+    fontWeight: 600,
+    lineHeight: 1.25,
+    float: 'right',
+    fontFamily: '"proxima nova bold", "Helvetica Neue", Helvetica, Arial, Sans-serif;',
+    transform: 'translateY(350%)',
+  },
   body1: {
     fontSize: 13,
   },
