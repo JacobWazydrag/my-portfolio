@@ -43,6 +43,7 @@ export default function TopBar() {
             backgroundColor: lighten(0.1, theme.header.background),
             color: lighten(0.1, theme.header.color),
             width: '100%',
+            height: '90px', 
             placeItems: 'center'
         },
         currentLink: {

@@ -37,9 +37,9 @@ function App() {
                         <Route exact path="/contact">
                             <Contact />
                         </Route>
+                <Footer />
                     </Layout>
                 </Switch>
-                <Footer />
             </BrowserRouter>
         </ThemeProvider>
     );
