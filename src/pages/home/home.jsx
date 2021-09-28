@@ -9,10 +9,10 @@ import './home.css';
 import HeatMap from '../../components/calendarHeatMap/heatMap';
 const AWS = require('aws-sdk');
 AWS.config.update({
-    region: 'us-east-2',
-    endpoint: 'http://dynamodb.us-east-2.amazonaws.com',
-    accessKeyId: 'AKIAWMOIGXNTN5UMZK5K',
-    secretAccessKey: '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'
+    region:             process.env.REACT_APP_GITLAB_AWS_API_REGION,
+    endpoint:           process.env.REACT_APP_GITLAB_AWS_API_ENDPOINT,
+    accessKeyId:        process.env.REACT_APP_GITLAB_AWS_API_ACCESSKEYID,
+    secretAccessKey:    process.env.REACT_APP_GITLAB_AWS_API_SECRETACCESSKEY
 });
 const dynamodb = new AWS.DynamoDB.DocumentClient();
 
