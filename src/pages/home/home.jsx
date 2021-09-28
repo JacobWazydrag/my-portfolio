@@ -85,11 +85,12 @@ export default function Home() {
     }, []);
     // console.log('Error/Events: ', events, error);
     return (
-        <React.Fragment>
+        <div style={{position: 'absolute', width: '100%', bottom: 0}}>
             <Grid container direction="column" alignItems='center'>
                 <Grid item>
-                    {events.length === 0 ? '...loading' : <HeatMap data={events} />}
-                    {error ? 'error loading data for heatmap' : null}
+                    {/* {events.length === 0 ? '...loading' : <HeatMap data={events} />}
+                    {error ? 'error loading data for heatmap' : null} */}
+                    {'Home content here'}
                 </Grid>
                 {/* <Grid
                     id="frontTop" 
@@ -216,6 +217,6 @@ export default function Home() {
                     </Fade>
                 </div>
             </Grid>
-        </React.Fragment>
+        </div>
     );
 }

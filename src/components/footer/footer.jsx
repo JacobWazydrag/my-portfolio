@@ -109,7 +109,7 @@ export default function Footer() {
     });
     const classes = useStyles();
     return (
-        <div>
+        <div style={{position: 'absolute', width: '100%', bottom: 0}}>
             <div className={classes.footerSprite}>
                 <div className={classes.footerThing}>
                     <ArrowForwardIosIcon
