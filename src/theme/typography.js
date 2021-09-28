@@ -47,6 +47,42 @@ const typography = {
     fontWeight: 500,
     lineHeight: 1.25,
   },
+  homeTitlesLeft: {
+    fontSize: "3.3vw",
+    fontWeight: 600,
+    lineHeight: 1.25,
+    float: 'right',
+    fontFamily: '"proxima nova bold", "Helvetica Neue", Helvetica, Arial, Sans-serif;',
+    transform: 'translateY(275%)',
+  },
+  homeTitlesRight: {
+    fontSize: "3.3rem",
+    fontWeight: 600,
+    lineHeight: 1.25,
+    display: 'flex',
+    fontFamily: '"proxima nova bold", "Helvetica Neue", Helvetica, Arial, Sans-serif;',
+    transform: 'translateY(350%)',
+    paddingLeft: 20
+  },
+  homeSubTitlesLeft: {
+    fontSize: "1.3rem",
+    color: '#757575',
+    lineHeight: 1.4,
+    float: 'right',
+    fontFamily: '"proxima nova bold", "Helvetica Neue", Helvetica, Arial, Sans-serif;',
+    transform: 'translateY(330%)',
+    marginRight: -380
+  },
+  homeSubTitlesRight: {
+    color: '#757575',
+    fontSize: "1.3rem",
+    lineHeight: 1.25,
+    display: 'flex',
+    fontFamily: '"proxima nova bold", "Helvetica Neue", Helvetica, Arial, Sans-serif;',
+    transform: 'translateY(300%)',
+    textAlign: 'end',
+    marginLeft: 89
+  },
   body1: {
     fontSize: 13,
   },
