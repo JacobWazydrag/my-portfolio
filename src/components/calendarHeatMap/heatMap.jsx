@@ -43,7 +43,7 @@ export default function HeatMap(props) {
     });
 
     const range = {
-        end: '2021-09-20',
+        end: '2021-12-31',
         start: '2020-11-02',
         existing: justTheDates,
 
