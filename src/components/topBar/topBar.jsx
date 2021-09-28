@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTheme } from '@material-ui/core/styles';
-import { AppBar, makeStyles, MenuItem, Toolbar, Drawer, IconButton, Avatar, Grid, Slide } from '@material-ui/core';
+import { AppBar, makeStyles, MenuItem, Toolbar, Drawer, IconButton, Avatar, Grid } from '@material-ui/core';
 import { darken, lighten } from 'polished';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import './topBar.css'
+import './topBar.css';
 export default function TopBar() {
     const [path, setPath] = useState(window.location.pathname);
     const [state, setState] = useState({
@@ -31,19 +31,14 @@ export default function TopBar() {
         };
     }, []);
 
-    useEffect(
-        () => {
-            console.log('load here');
-        },
-        [path]
-    );
+    useEffect(() => {}, [path]);
     const theme = useTheme();
     const useStyles = makeStyles({
         header: {
             backgroundColor: lighten(0.1, theme.header.background),
             color: lighten(0.1, theme.header.color),
             width: '100%',
-            height: '90px', 
+            height: '90px',
             placeItems: 'center'
         },
         currentLink: {
@@ -83,7 +78,14 @@ export default function TopBar() {
             <Toolbar className={classes.header}>
                 <Grid container spacing={3}>
                     <Grid className={classes.avatarGrid} item xs={3}>
-                        <NavLink to="/" className={classes.link}>
+                        <NavLink
+                            isActive={(match, location) => {
+                                if (match) {
+                                    setPath(location.pathname);
+                                }
+                            }}
+                            to="/"
+                            className={classes.link}>
                             <h1>J W</h1>
                         </NavLink>
                     </Grid>

@@ -1,36 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useTheme } from '@material-ui/core/styles';
-import { AppBar, makeStyles, MenuItem, Toolbar, Drawer, IconButton, Avatar, Grid } from '@material-ui/core';
-import { borderRadius, darken, lighten } from 'polished';
+import { makeStyles, Grid } from '@material-ui/core';
+import { darken } from 'polished';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import InstagramIcon from '@material-ui/icons/Instagram';
 
 export default function Footer() {
     const [path, setPath] = useState(window.location.pathname);
-    const [state, setState] = useState({
-        mobileView: false,
-        drawerOpen: false
-    });
-    const { mobileView, drawerOpen } = state;
-    useEffect(() => {
-        const setResponsiveness = () => {
-            return window.innerWidth < 900
-                ? setState(prevState => ({ ...prevState, mobileView: true }))
-                : setState(prevState => ({ ...prevState, mobileView: false }));
-        };
+    // const [state, setState] = useState({
+    //     mobileView: false,
+    //     drawerOpen: false
+    // });
+    // // const { mobileView, drawerOpen } = state;
+    // useEffect(() => {
+    //     const setResponsiveness = () => {
+    //         return window.innerWidth < 900
+    //             ? setState(prevState => ({ ...prevState, mobileView: true }))
+    //             : setState(prevState => ({ ...prevState, mobileView: false }));
+    //     };
 
-        setResponsiveness();
+    //     setResponsiveness();
 
-        window.addEventListener('resize', () => setResponsiveness());
+    //     window.addEventListener('resize', () => setResponsiveness());
 
-        return () => {
-            window.removeEventListener('resize', () => setResponsiveness());
-        };
-    }, []);
+    //     return () => {
+    //         window.removeEventListener('resize', () => setResponsiveness());
+    //     };
+    // }, []);
     const theme = useTheme();
     const useStyles = makeStyles({
         footer: {
@@ -38,7 +34,6 @@ export default function Footer() {
             padding: '40px 5% 0 5%',
             color: '#757575',
             fontSize: '16px',
-            fontSize: '1.6rem',
             textAlign: 'center',
             position: 'absolute',
             width: '100%',
@@ -112,7 +107,6 @@ export default function Footer() {
             alignSelf: 'center'
         }
     });
-    console.log(theme);
     const classes = useStyles();
     return (
         <div>
@@ -130,9 +124,10 @@ export default function Footer() {
                     />
                 </div>
             </div>
+            <div className={classes.footer} />
             <Grid style={{ position: 'absolute', zIndex: 999, placeContent: 'flex-end' }} container spacing={3}>
-                <NavLink  to="/" className={classes.link}>
-                    <h4 style={{fontWeight: 200}}>© 2021 Jacob Wazydrag</h4>
+                <NavLink to="/" className={classes.link}>
+                    <h4 style={{ fontWeight: 200 }}>© 2021 Jacob Wazydrag</h4>
                 </NavLink>
                 <Grid className={classes.linksGrid} item xs={5}>
                     {['about', 'featured', 'portfolio', 'blog', 'contact'].map((link, idx) => {
@@ -152,7 +147,6 @@ export default function Footer() {
                     })}
                 </Grid>
             </Grid>
-            <div className={classes.footer} />
         </div>
     );
 }

@@ -23,10 +23,10 @@ function App() {
                             <Home />
                         </Route>
                         <Route exact path="/about">
-                            <About/>
+                            <About />
                         </Route>
                         <Route exact path="/featured">
-                            <Featured/>
+                            <Featured />
                         </Route>
                         <Route exact path="/portfolio">
                             <Portfolio />
@@ -37,7 +37,7 @@ function App() {
                         <Route exact path="/contact">
                             <Contact />
                         </Route>
-                <Footer />
+                        <Footer />
                     </Layout>
                 </Switch>
             </BrowserRouter>

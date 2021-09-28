@@ -48,12 +48,12 @@ const typography = {
     lineHeight: 1.25,
   },
   homeTitlesLeft: {
-    fontSize: "3.3rem",
+    fontSize: "3.3vw",
     fontWeight: 600,
     lineHeight: 1.25,
     float: 'right',
     fontFamily: '"proxima nova bold", "Helvetica Neue", Helvetica, Arial, Sans-serif;',
-    transform: 'translateY(350%)',
+    transform: 'translateY(275%)',
   },
   homeTitlesRight: {
     fontSize: "3.3rem",

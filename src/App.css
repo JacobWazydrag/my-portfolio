@@ -1,5 +1,5 @@
 body {
-    width: '-webkit-available';
+    width: '100%';
     overflow-x: hidden;
     position: relative;
 }
