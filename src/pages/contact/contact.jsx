@@ -1,141 +1,166 @@
-import React from 'react'
-import { makeStyles, Grid, Typography, Card, CardContent, CardActions, Divider, Fade } from '@material-ui/core';
+import React from 'react';
+import { makeStyles, Grid, Typography, Fade, TextField, Button, FormControlLabel } from '@material-ui/core';
+import { alpha } from '@material-ui/core/styles';
 
 export default function Contact() {
+    const useStylesTextField = makeStyles((theme) => ({
+        root: {
+            'border': '#949494 solid 1px',
+            'color': 'black',
+            'fontSize': '20px',
+            // 'overflow': 'hidden',
+            'height': '52px',
+            'width': '500px',
+            'borderRadius': 4,
+            'backgroundColor': '#fcfcfb',
+            'transition': theme.transitions.create(['border-color', 'box-shadow']),
+            '&:hover': {
+                backgroundColor: '#fff',
+            },
+            '&$focused': {
+                backgroundColor: '#fff',
+                boxShadow: `${alpha(theme.palette.primary.main, 0.25)} 0 0 0 2px`,
+                borderColor: '#233044',
+            },
+        },
+        focused: {},
+    }));
+    const useStylesTextFieldMulti = makeStyles((theme) => ({
+        root: {
+            'border': '#949494 solid 1px',
+            'color': 'black',
+            'fontSize': '20px',
+            // 'overflow': 'hidden',
+            'minHeight': '152px',
+            'width': '500px',
+            'borderRadius': 4,
+            'backgroundColor': '#fcfcfb',
+            'transition': theme.transitions.create(['border-color', 'box-shadow']),
+            '&:hover': {
+                backgroundColor: '#fff',
+            },
+            '&$focused': {
+                backgroundColor: '#fff',
+                boxShadow: `${alpha(theme.palette.primary.main, 0.25)} 0 0 0 2px`,
+                borderColor: '#233044',
+            },
+        },
+        focused: {},
+    }));
+
+    function TextFieldWithStyles(props) {
+        const classes = useStylesTextField();
+
+        return <TextField inputProps={{ style: {padding: '10px'} }} InputProps={{ classes, disableUnderline: true }} {...props} />;
+    }
+    function TextFieldWithStylesMulti(props) {
+        const classes = useStylesTextFieldMulti();
+
+        return <TextField multiline={true} inputProps={{ style: {padding: '10px', alignSelf: 'start'} }} InputProps={{ classes, disableUnderline: true }} {...props} />;
+    }
+
+    const useStyles = makeStyles((theme) => ({
+        root: {
+            display: 'flex',
+            flexWrap: 'wrap',
+        },
+        margin: {
+            margin: theme.spacing(1),
+        },
+    }));
+    const classes = useStyles();
     return (
-        <div style={{position: 'absolute', width: '100%', bottom: 0}}>
-        <Grid container direction="column" alignItems='center'>
-            <Grid item>
-                {/* {events.length === 0 ? '...loading' : <HeatMap data={events} />}
-                {error ? 'error loading data for heatmap' : null} */}
-                {'Contact content here'}
-            </Grid>
-            {/* <Grid
-                id="frontTop" 
-                style={{}}
-                justifyContent="center"
-                container
-                direction="row">
-                <Slide in direction={'right'} timeout={2500}>
-                    <Grid style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }} item xs>
-                        <div style={{ display: 'grid' }}>
-                            <span style={{ fontSize: '2.5vw', color: '#333333', fontWeight: 650 }}>
-                                software engineer
-                            </span>
-                            <span style={{ fontSize: '1.0vw' }}>
-                                multitasking programmer who can handle <br />the complete implementation <br /> of a
-                                website or application.
-                            </span>
-                        </div>
-                    </Grid>
-                </Slide>
-                <Grid item xs>
-                    <Fade in timeout={3500}>
-                        <img
-                            style={{ paddingTop: 40, maxWidth: '100%', height: 'auto' }}
-                            src={ImageOfHandsomeDude}
-                            alt="handsome dude"
-                        />
-                    </Fade>
-                </Grid>
-                <Slide in direction={'left'} timeout={2500}>
-                    <Grid
-                        style={{
-                            display: 'flex',
-                            justifyContent: 'flex-start',
-                            alignItems: 'center',
-                            paddingRight: '150px'
-                        }}
-                        item
-                        xs>
-                        <div style={{ display: 'grid' }}>
-                            <span style={{ fontSize: '2.5vw', color: '#333333', fontWeight: 650 }}>
-                                web developer
-                            </span>
-                            <span style={{ fontSize: '1.0vw', textAlign: 'right' }}>
-                                Front end developer who writes<br />clean, elegant <br /> and efficient code
-                            </span>
-                        </div>
-                    </Grid>
-                </Slide>
-            </Grid> */}
-            <div
-                style={{
-                    backgroundColor: 'whitesmoke',
-                    width: '100%',
-                    boxShadow: 'inset 0px 4px 4px 0px rgb(0 0 0 / 10%)',
-                    placeContent: 'center'
-                }}>
-                <Fade in timeout={3000}>
-                    <Grid
-                        id="frontBottom"
-                        style={{ marginTop: '100px', paddingBottom: '100px' }}
-                        justifyContent="center"
-                        container
-                        direction="row">
-                        <Grid style={{ placeContent: 'center' }} container>
-                            {/* <Divider className={classes.divider} /> */}
-                            <Typography
-                                style={{
-                                    color: 'grey',
-                                    paddingRight: 25,
-                                    paddingLeft: 25,
-                                    paddingBottom: 25,
-                                    fontFamily: `"proxima nova semibold", "Helvetica Neue", Helvetica, Arial, Sans-serif`
-                                }}
-                                variant="h6"
-                                component="p">
-                                SOME OF MY LATEST WORK
-                            </Typography>
-                            {/* <Divider className={classes.divider} /> */}
-                        </Grid>
-                        Some Content
-                        {/* {[
-                            { pic: WinfredArtShow, id: 1 },
-                            { id: 2, pic: ReminderPro },
-                            { id: 3, pic: ArtSpaceLessons }
-                        ].map((el, idx) => {
-                            return (
-                                <Grid key={idx} style={{ paddingLeft: 20 }} item>
-                                    <Card className={classes.card}>
-                                        <CardContent>
-                                            <img
-                                                style={{ width: '292.5px', height: '240px' }}
-                                                src={el.pic}
-                                                alt={'Project pictures'}
-                                            />
-                                            <div style={{ display: 'flex' }}>
-                                                <div>
-                                                    <Typography
-                                                        style={{ color: 'grey' }}
-                                                        variant="h6"
-                                                        component="p">
-                                                        Creating a lean design system
-                                                    </Typography>
-                                                    <Typography
-                                                        style={{ color: 'lightgrey' }}
-                                                        variant={'body2'}
-                                                        component="p">
-                                                        {'a benevolent smile'}
-                                                    </Typography>
+        <div style={{ position: 'absolute', width: '100%', bottom: 0 }}>
+            <Grid container direction='column' alignItems='center'>
+                <Grid item>{'Contact content here'}</Grid>
+
+                <div
+                    style={{
+                        backgroundColor: 'whitesmoke',
+                        width: '100%',
+                        boxShadow: 'inset 0px 4px 4px 0px rgb(0 0 0 / 10%)',
+                        placeContent: 'center',
+                    }}
+                >
+                    <Fade in timeout={3000}>
+                        <Grid
+                            id='frontBottom'
+                            style={{ marginTop: '100px', paddingBottom: '100px' }}
+                            justifyContent='center'
+                            container
+                            direction='row'
+                        >
+                            <Grid style={{ placeContent: 'center' }} container direction='row'>
+                                <Grid item direction='column'>
+                                    <Typography
+                                        style={{
+                                            color: 'black',
+                                            paddingRight: 25,
+                                            paddingLeft: 25,
+                                            paddingBottom: 25,
+                                        }}
+                                        variant='h1'
+                                    >
+                                        Send me an Email
+                                    </Typography>
+                                    <Grid container direction='column'>
+                                        <FormControlLabel
+                                            style={{ cursor: 'default' }}
+                                            control={<TextFieldWithStyles variant='filled' id='reddit-input' />}
+                                            label={
+                                                <div style={{ marginRight: '440px', padding: '5px', fontSize: '18px' }}>
+                                                    Name
                                                 </div>
-                                                <div>
-                                                    <CardActions>
-                                                        <ArrowForwardIosSharpIcon className={classes.arrow}>
-                                                            Learn More
-                                                        </ArrowForwardIosSharpIcon>
-                                                    </CardActions>
+                                            }
+                                            labelPlacement='top'
+                                        />
+                                        <FormControlLabel
+                                            style={{ cursor: 'default' }}
+                                            control={<TextFieldWithStyles variant='filled' id='reddit-input' />}
+                                            label={
+                                                <div style={{ marginRight: '440px', padding: '5px', fontSize: '18px' }}>
+                                                    Email
                                                 </div>
-                                            </div>
-                                        </CardContent>
-                                    </Card>
+                                            }
+                                            labelPlacement='top'
+                                        />
+                                    </Grid>
                                 </Grid>
-                            );
-                        })} */}
-                    </Grid>
-                </Fade>
-            </div>
-        </Grid>
-    </div>
-    )
+                                <Grid style={{ marginTop: '64px' }} item direction='column'>
+                                    <Grid container direction='column'>
+                                        <FormControlLabel
+                                            style={{ cursor: 'default' }}
+                                            control={<TextFieldWithStylesMulti variant='filled' id='reddit-input' />}
+                                            label={
+                                                <div style={{ marginRight: '425px', padding: '5px', fontSize: '18px' }}>
+                                                    Message
+                                                </div>
+                                            }
+                                            labelPlacement='top'
+                                        />
+
+                                        <Button
+                                            style={{
+                                                backgroundColor: '#233044',
+                                                color: 'white',
+                                                width: '100px',
+                                                marginLeft: '420px',
+                                                marginTop: '25px',
+                                                fontSize: '18px',
+                                                whiteSpace: 'nowrap',
+                                            }}
+                                            size={'medium'}
+                                            variant={'contained'}
+                                        >
+                                            Send Email
+                                        </Button>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Fade>
+                </div>
+            </Grid>
+        </div>
+    );
 }
