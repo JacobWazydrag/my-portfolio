@@ -38,8 +38,9 @@ const useStylesTextFieldMulti = makeStyles(theme => ({
     root: {
         border: '#949494 solid 1px',
         color: 'black',
+        padding: '0px',
         fontSize: '20px',
-        minHeight: '140px',
+        minHeight: '142px',
         width: '500px',
         borderRadius: 4,
         backgroundColor: '#fcfcfb',
@@ -215,7 +216,8 @@ export default function Contact() {
                                                         ? '#bce68a 1px solid'
                                                         : '#EFBBB9 1px solid',
                                                 borderRadius: '3px',
-                                                backgroundColor: result === 'Email sent. Thanks.' ? '#ebf9dd' : '#f8efef',
+                                                backgroundColor:
+                                                    result === 'Email sent. Thanks.' ? '#ebf9dd' : '#f8efef',
                                                 color: result === 'Email sent. Thanks.' ? '#317F39' : '#bf2727',
                                                 marginTop: '20px',
                                                 marginLeft: '15px',
@@ -228,7 +230,7 @@ export default function Contact() {
                                             {result}
                                         </Typography>
                                     </Grid>
-                                    <Grid style={{ marginTop: '67px' }} item direction="column">
+                                    <Grid style={{ marginTop: '65px' }} item direction="column">
                                         <Grid container direction="column">
                                             <FormControlLabel
                                                 style={{ cursor: 'default' }}
