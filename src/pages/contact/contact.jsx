@@ -110,7 +110,7 @@ export default function Contact() {
                 if (res.status === 200) {
                     setLoading(false);
                     setForm({ name: '', email: '', message: '' });
-                    setResult('Email sent. Thanks.');
+                    setResult('Email sent!');
                 } else {
                     setLoading(false);
                     setForm({ name: '', email: '', message: '' });
@@ -156,7 +156,7 @@ export default function Contact() {
                                                 paddingBottom: 25
                                             }}
                                             variant="h1">
-                                            Send me an Email
+                                            Contact
                                         </Typography>
                                         <Grid container direction="column">
                                             <FormControlLabel

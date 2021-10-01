@@ -1,96 +1,121 @@
-import React from 'react'
+import React from 'react';
 import { makeStyles, Grid, Typography, Card, CardContent, CardActions, Divider, Fade } from '@material-ui/core';
-
+import AboutImage from '../../../src/assets/images/AboutPic.jpg';
 export default function About() {
     return (
-        <div style={{position: 'absolute', width: '100%', bottom: 0}}>
-        <Grid container direction="column" alignItems='center'>
-            <Grid item>
-                {/* {events.length === 0 ? '...loading' : <HeatMap data={events} />}
-                {error ? 'error loading data for heatmap' : null} */}
-                {'About content here'}
-            </Grid>
-            {/* <Grid
-                id="frontTop" 
-                style={{}}
-                justifyContent="center"
-                container
-                direction="row">
-                <Slide in direction={'right'} timeout={2500}>
-                    <Grid style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }} item xs>
-                        <div style={{ display: 'grid' }}>
-                            <span style={{ fontSize: '2.5vw', color: '#333333', fontWeight: 650 }}>
-                                software engineer
-                            </span>
-                            <span style={{ fontSize: '1.0vw' }}>
-                                multitasking programmer who can handle <br />the complete implementation <br /> of a
-                                website or application.
-                            </span>
+        <div>
+            <Grid container direction="column" alignItems="center">
+                <Grid id="frontTop" style={{}} justifyContent="center" container direction="row">
+                    <Grid container direction="column" style={{ alignItems: 'center' }}>
+                        <div style={{ display: 'flex', flexDirection: 'row', placeItems: 'flex-end' }}>
+                            <div style={{ height: '590px', width: '440px' }}>
+                                <h1
+                                    style={{
+                                        fontSize: '7.2rem',
+                                        margin: '0',
+                                        color: '#333333',
+                                        textRendering: 'optimizelegibility',
+                                        fontWeight: 'normal',
+                                        fontFamily:
+                                            '"proxima nova bold", "Helvetica Neue", Helvetica, Arial, Sans-serif'
+                                    }}>
+                                    about.
+                                </h1>
+                                <h3>I'm a software engineer based in Chicago, Illinois</h3>
+                                <h4>
+                                    <span>I enjoy turning complex problems into simple, beautiful</span>
+                                    <span>and intuitive designs. When I'm not pushing pixels, you'll </span>
+                                    <span>find me cooking, gardening or working out in the park.</span>
+                                </h4>
+                            </div>
+                            <div>
+                                <img style={{ height: '590px', width: '440px' }} src={AboutImage} />
+                            </div>
                         </div>
-                    </Grid>
-                </Slide>
-                <Grid item xs>
-                    <Fade in timeout={3500}>
-                        <img
-                            style={{ paddingTop: 40, maxWidth: '100%', height: 'auto' }}
-                            src={ImageOfHandsomeDude}
-                            alt="handsome dude"
-                        />
-                    </Fade>
-                </Grid>
-                <Slide in direction={'left'} timeout={2500}>
-                    <Grid
-                        style={{
-                            display: 'flex',
-                            justifyContent: 'flex-start',
-                            alignItems: 'center',
-                            paddingRight: '150px'
-                        }}
-                        item
-                        xs>
-                        <div style={{ display: 'grid' }}>
-                            <span style={{ fontSize: '2.5vw', color: '#333333', fontWeight: 650 }}>
-                                web developer
-                            </span>
-                            <span style={{ fontSize: '1.0vw', textAlign: 'right' }}>
-                                Front end developer who writes<br />clean, elegant <br /> and efficient code
-                            </span>
-                        </div>
-                    </Grid>
-                </Slide>
-            </Grid> */}
-            <div
-                style={{
-                    backgroundColor: 'whitesmoke',
-                    width: '100%',
-                    boxShadow: 'inset 0px 4px 4px 0px rgb(0 0 0 / 10%)',
-                    placeContent: 'center'
-                }}>
-                <Fade in timeout={3000}>
-                    <Grid
-                        id="frontBottom"
-                        style={{ marginTop: '100px', paddingBottom: '100px' }}
-                        justifyContent="center"
-                        container
-                        direction="row">
-                        <Grid style={{ placeContent: 'center' }} container>
-                            {/* <Divider className={classes.divider} /> */}
-                            <Typography
+                        <div style={{ flexDirection: 'row', display: 'flex' }}>
+                            <div
                                 style={{
-                                    color: 'grey',
-                                    paddingRight: 25,
-                                    paddingLeft: 25,
-                                    paddingBottom: 25,
-                                    fontFamily: `"proxima nova semibold", "Helvetica Neue", Helvetica, Arial, Sans-serif`
+                                    paddingLeft: '10px',
+                                    backgroundColor: 'coral',
+                                    height: '100px',
+                                    width: '144px'
                                 }}
-                                variant="h6"
-                                component="p">
-                                SOME OF MY LATEST WORK
-                            </Typography>
-                            {/* <Divider className={classes.divider} /> */}
-                        </Grid>
-                        Some Content
-                        {/* {[
+                            />
+                            <div
+                                style={{
+                                    paddingLeft: '10px',
+                                    backgroundColor: 'coral',
+                                    height: '100px',
+                                    width: '144px'
+                                }}
+                            />
+                            <div
+                                style={{
+                                    paddingLeft: '10px',
+                                    backgroundColor: 'coral',
+                                    height: '100px',
+                                    width: '144px'
+                                }}
+                            />
+                            <div
+                                style={{
+                                    paddingLeft: '10px',
+                                    backgroundColor: 'coral',
+                                    height: '100px',
+                                    width: '144px'
+                                }}
+                            />
+                            <div
+                                style={{
+                                    paddingLeft: '10px',
+                                    backgroundColor: 'coral',
+                                    height: '100px',
+                                    width: '144px'
+                                }}
+                            />
+                            <div
+                                style={{
+                                    paddingLeft: '10px',
+                                    backgroundColor: 'coral',
+                                    height: '100px',
+                                    width: '144px'
+                                }}
+                            />
+                        </div>
+                    </Grid>
+                </Grid>
+                <div
+                    style={{
+                        backgroundColor: 'whitesmoke',
+                        width: '100%',
+                        boxShadow: 'inset 0px 4px 4px 0px rgb(0 0 0 / 10%)',
+                        placeContent: 'center'
+                    }}>
+                    <Fade in timeout={3000}>
+                        <Grid
+                            id="frontBottom"
+                            style={{ marginTop: '100px', paddingBottom: '100px' }}
+                            justifyContent="center"
+                            container
+                            direction="row">
+                            <Grid style={{ placeContent: 'center' }} container>
+                                {/* <Divider className={classes.divider} /> */}
+                                <Typography
+                                    style={{
+                                        color: 'grey',
+                                        paddingRight: 25,
+                                        paddingLeft: 25,
+                                        paddingBottom: 25,
+                                        fontFamily: `"proxima nova semibold", "Helvetica Neue", Helvetica, Arial, Sans-serif`
+                                    }}
+                                    variant="h6"
+                                    component="p">
+                                    SOME OF MY LATEST WORK
+                                </Typography>
+                                {/* <Divider className={classes.divider} /> */}
+                            </Grid>
+                            Some Content
+                            {/* {[
                             { pic: WinfredArtShow, id: 1 },
                             { id: 2, pic: ReminderPro },
                             { id: 3, pic: ArtSpaceLessons }
@@ -132,10 +157,10 @@ export default function About() {
                                 </Grid>
                             );
                         })} */}
-                    </Grid>
-                </Fade>
-            </div>
-        </Grid>
-    </div>
-    )
+                        </Grid>
+                    </Fade>
+                </div>
+            </Grid>
+        </div>
+    );
 }
