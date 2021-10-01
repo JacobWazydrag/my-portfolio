@@ -1,0 +1,28 @@
+img {
+    max-width: 100%;
+    position: relative;
+    margin-bottom: 4rem;
+    height: 100px;
+  }
+  img.major {
+    margin-top: 4rem;
+    margin-bottom: 0;
+  }
+  img.shadow {
+    border: #dddddd solid 1px;
+  }
+  img.icon {
+    margin-bottom: 0.8rem !important;
+  }
+
+  .snaps a {
+    width: 30%;
+    margin: 1% 2% 1% 0;
+    padding: 1%;
+  }
+  .snaps a:nth-child(2n) {
+    margin-right: 2%;
+  }
+  .snaps a:nth-child(3n) {
+    margin-right: 0;
+  }

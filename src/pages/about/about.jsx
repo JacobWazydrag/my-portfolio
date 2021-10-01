@@ -1,12 +1,20 @@
 import React from 'react';
 import { makeStyles, Grid, Typography, Card, CardContent, CardActions, Divider, Fade } from '@material-ui/core';
 import AboutImage from '../../../src/assets/images/AboutPic.jpg';
+import AboutImage1 from '../../../src/assets/images/carousalImage1.jpg';
+import AboutImage2 from '../../../src/assets/images/carousalImage2.jpeg';
+import AboutImage3 from '../../../src/assets/images/carousalImage3.jpeg';
+import AboutImage4 from '../../../src/assets/images/dog.jpg';
+import AboutImage5 from '../../../src/assets/images/climbing.jpg';
+import AboutImage6 from '../../../src/assets/images/46635.jpg';
+import SmallCardWithImage from '../../components/cards/smallCardWithImage';
+
 export default function About() {
     return (
         <div>
-            <Grid container direction="column" alignItems="center">
-                <Grid id="frontTop" style={{}} justifyContent="center" container direction="row">
-                    <Grid container direction="column" style={{ alignItems: 'center' }}>
+            <Grid container direction='column' alignItems='center'>
+                <Grid id='frontTop' style={{}} justifyContent='center' container direction='row'>
+                    <Grid container direction='column' style={{ alignItems: 'center' }}>
                         <div style={{ display: 'flex', flexDirection: 'row', placeItems: 'flex-end' }}>
                             <div style={{ height: '590px', width: '440px' }}>
                                 <h1
@@ -17,70 +25,30 @@ export default function About() {
                                         textRendering: 'optimizelegibility',
                                         fontWeight: 'normal',
                                         fontFamily:
-                                            '"proxima nova bold", "Helvetica Neue", Helvetica, Arial, Sans-serif'
-                                    }}>
+                                            '"proxima nova bold", "Helvetica Neue", Helvetica, Arial, Sans-serif',
+                                    }}
+                                >
                                     about.
                                 </h1>
                                 <h3>I'm a software engineer based in Chicago, Illinois</h3>
                                 <h4>
-                                    <span>I enjoy turning complex problems into simple, beautiful</span>
-                                    <span>and intuitive designs. When I'm not pushing pixels, you'll </span>
-                                    <span>find me cooking, gardening or working out in the park.</span>
+                                    <div >I enjoy turning complex problems into simple, beautiful</div>
+                                    <div style={{marginTop: '10px'}}>and intuitive designs. When I'm not pushing pixels, you'll </div>
+                                    <div style={{marginTop: '10px'}}>find me cooking, gardening or working out in the park.</div>
                                 </h4>
                             </div>
                             <div>
-                                <img style={{ height: '590px', width: '440px' }} src={AboutImage} />
+                                <img style={{ height: '490px', width: '590px' }} src={AboutImage} />
                             </div>
                         </div>
-                        <div style={{ flexDirection: 'row', display: 'flex' }}>
-                            <div
-                                style={{
-                                    paddingLeft: '10px',
-                                    backgroundColor: 'coral',
-                                    height: '100px',
-                                    width: '144px'
-                                }}
-                            />
-                            <div
-                                style={{
-                                    paddingLeft: '10px',
-                                    backgroundColor: 'coral',
-                                    height: '100px',
-                                    width: '144px'
-                                }}
-                            />
-                            <div
-                                style={{
-                                    paddingLeft: '10px',
-                                    backgroundColor: 'coral',
-                                    height: '100px',
-                                    width: '144px'
-                                }}
-                            />
-                            <div
-                                style={{
-                                    paddingLeft: '10px',
-                                    backgroundColor: 'coral',
-                                    height: '100px',
-                                    width: '144px'
-                                }}
-                            />
-                            <div
-                                style={{
-                                    paddingLeft: '10px',
-                                    backgroundColor: 'coral',
-                                    height: '100px',
-                                    width: '144px'
-                                }}
-                            />
-                            <div
-                                style={{
-                                    paddingLeft: '10px',
-                                    backgroundColor: 'coral',
-                                    height: '100px',
-                                    width: '144px'
-                                }}
-                            />
+                        <div style={{ flexDirection: 'row', display: 'flex', borderTop: '#dddddd 1px solid' }}>
+                            {[AboutImage1, AboutImage2, AboutImage3,AboutImage4, AboutImage5, AboutImage6].map((el, idx) => {
+                                return (
+                                    <div style={{paddingLeft: 25, marginTop: 20, marginBottom: 20}}>
+                                        <SmallCardWithImage key={el + idx} src={el} />
+                                    </div>
+                                );
+                            })}
                         </div>
                     </Grid>
                 </Grid>
@@ -89,15 +57,17 @@ export default function About() {
                         backgroundColor: 'whitesmoke',
                         width: '100%',
                         boxShadow: 'inset 0px 4px 4px 0px rgb(0 0 0 / 10%)',
-                        placeContent: 'center'
-                    }}>
+                        placeContent: 'center',
+                    }}
+                >
                     <Fade in timeout={3000}>
                         <Grid
-                            id="frontBottom"
+                            id='frontBottom'
                             style={{ marginTop: '100px', paddingBottom: '100px' }}
-                            justifyContent="center"
+                            justifyContent='center'
                             container
-                            direction="row">
+                            direction='row'
+                        >
                             <Grid style={{ placeContent: 'center' }} container>
                                 {/* <Divider className={classes.divider} /> */}
                                 <Typography
@@ -106,10 +76,11 @@ export default function About() {
                                         paddingRight: 25,
                                         paddingLeft: 25,
                                         paddingBottom: 25,
-                                        fontFamily: `"proxima nova semibold", "Helvetica Neue", Helvetica, Arial, Sans-serif`
+                                        fontFamily: `"proxima nova semibold", "Helvetica Neue", Helvetica, Arial, Sans-serif`,
                                     }}
-                                    variant="h6"
-                                    component="p">
+                                    variant='h6'
+                                    component='p'
+                                >
                                     SOME OF MY LATEST WORK
                                 </Typography>
                                 {/* <Divider className={classes.divider} /> */}
