@@ -1,9 +1,7 @@
 import React from 'react';
-import { makeStyles, Grid, Typography, Card, CardContent, CardActions, Divider, Fade } from '@material-ui/core';
+import { Grid, Typography, Fade } from '@material-ui/core';
 import AboutImage from '../../../src/assets/images/AboutPic.jpg';
 import AboutImage1 from '../../../src/assets/images/carousalImage1.jpg';
-import AboutImage2 from '../../../src/assets/images/carousalImage2.jpeg';
-import AboutImage3 from '../../../src/assets/images/carousalImage3.jpeg';
 import AboutImage4 from '../../../src/assets/images/dog.jpg';
 import AboutImage5 from '../../../src/assets/images/climbing.jpg';
 import AboutImage6 from '../../../src/assets/images/46635.jpg';
@@ -40,8 +38,8 @@ export default function About() {
                                     </div>
                                 </h4>
                             </div>
-                            <div>
-                                <img style={{ height: '490px', width: '590px' }} src={AboutImage} />
+                            <div style={{ paddingBottom: 100 }}>
+                                <img style={{ height: '490px', width: '590px', marginTop: '100px' }} src={AboutImage} />
                             </div>
                         </div>
                         <div style={{ flexDirection: 'row', display: 'flex', borderTop: '#dddddd 1px solid' }}>
@@ -77,7 +75,6 @@ export default function About() {
                             container
                             direction="row">
                             <Grid style={{ placeContent: 'center' }} container>
-                                {/* <Divider className={classes.divider} /> */}
                                 <Typography
                                     style={{
                                         color: 'grey',
@@ -90,51 +87,8 @@ export default function About() {
                                     component="p">
                                     SOME OF MY LATEST WORK
                                 </Typography>
-                                {/* <Divider className={classes.divider} /> */}
                             </Grid>
                             Some Content
-                            {/* {[
-                            { pic: WinfredArtShow, id: 1 },
-                            { id: 2, pic: ReminderPro },
-                            { id: 3, pic: ArtSpaceLessons }
-                        ].map((el, idx) => {
-                            return (
-                                <Grid key={idx} style={{ paddingLeft: 20 }} item>
-                                    <Card className={classes.card}>
-                                        <CardContent>
-                                            <img
-                                                style={{ width: '292.5px', height: '240px' }}
-                                                src={el.pic}
-                                                alt={'Project pictures'}
-                                            />
-                                            <div style={{ display: 'flex' }}>
-                                                <div>
-                                                    <Typography
-                                                        style={{ color: 'grey' }}
-                                                        variant="h6"
-                                                        component="p">
-                                                        Creating a lean design system
-                                                    </Typography>
-                                                    <Typography
-                                                        style={{ color: 'lightgrey' }}
-                                                        variant={'body2'}
-                                                        component="p">
-                                                        {'a benevolent smile'}
-                                                    </Typography>
-                                                </div>
-                                                <div>
-                                                    <CardActions>
-                                                        <ArrowForwardIosSharpIcon className={classes.arrow}>
-                                                            Learn More
-                                                        </ArrowForwardIosSharpIcon>
-                                                    </CardActions>
-                                                </div>
-                                            </div>
-                                        </CardContent>
-                                    </Card>
-                                </Grid>
-                            );
-                        })} */}
                         </Grid>
                     </Fade>
                 </div>
