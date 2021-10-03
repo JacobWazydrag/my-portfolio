@@ -123,7 +123,7 @@ export default function Contact() {
                 setResult(`Uh Oh: Error ${err.status}!`);
             });
     };
-
+    console.log(result)
     return (
         <div style={{ position: 'absolute', width: '100%', bottom: 0 }}>
             <Grid container direction="column" alignItems="center">
@@ -212,13 +212,13 @@ export default function Contact() {
                                             variant={'h4'}
                                             style={{
                                                 border:
-                                                    result === 'Email sent. Thanks.'
+                                                    result === 'Email sent!'
                                                         ? '#bce68a 1px solid'
                                                         : '#EFBBB9 1px solid',
                                                 borderRadius: '3px',
                                                 backgroundColor:
-                                                    result === 'Email sent. Thanks.' ? '#ebf9dd' : '#f8efef',
-                                                color: result === 'Email sent. Thanks.' ? '#317F39' : '#bf2727',
+                                                    result === 'Email sent!' ? '#ebf9dd' : '#f8efef',
+                                                color: result === 'Email sent!' ? '#317F39' : '#bf2727',
                                                 marginTop: '20px',
                                                 marginLeft: '15px',
                                                 height: '32px',
